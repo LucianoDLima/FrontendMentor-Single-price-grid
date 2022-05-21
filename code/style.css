@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Screen reader only, for accessibility when needed */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Karla";
+  background-color: hsl(204deg, 43%, 93%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  min-height: 100vh;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-inline: 3.2rem;
+  box-shadow: 0 2px 10px 5px rgba(42, 178, 175, 0.15);
+  border-radius: 0.8rem;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 21.6rem 25.9rem;
+    max-width: 635px;
+  }
+}
+
+.container__info,
+.container__price,
+.container__about {
+  padding: 2.75rem 2.4rem 3.1rem 2.4rem;
+}
+@media screen and (min-width: 600px) {
+  .container__info,
+.container__price,
+.container__about {
+    padding: 4rem;
+  }
+}
+
+.container__info {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+@media screen and (min-width: 600px) {
+  .container__info {
+    grid-column: 1/3;
+  }
+}
+.container__info h2 {
+  color: hsl(179deg, 62%, 43%);
+  font-size: 1.95rem;
+  margin-bottom: 2.55rem;
+}
+@media screen and (min-width: 600px) {
+  .container__info h2 {
+    font-size: 2.35rem;
+    margin-bottom: 2.35rem;
+  }
+}
+.container__info h3 {
+  color: hsl(71deg, 73%, 54%);
+  font-size: 1.45rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 600px) {
+  .container__info h3 {
+    font-size: 1.7555rem;
+    margin-bottom: 0.75rem;
+  }
+}
+.container__info p {
+  color: hsl(179deg, 47%, 52%);
+  font-size: 1.37rem;
+  line-height: 1.9;
+}
+@media screen and (min-width: 600px) {
+  .container__info p {
+    font-size: 1.565rem;
+    line-height: 1.7;
+  }
+}
+
+.container__price {
+  background-color: hsl(179deg, 62%, 43%);
+  padding-top: 2.5rem;
+  padding-bottom: 2.45rem;
+}
+@media screen and (min-width: 600px) {
+  .container__price {
+    border-radius: 0 0 0 0.8rem;
+    padding-top: 4.1rem;
+    padding-right: 4.1rem;
+  }
+}
+.container__price h2 {
+  color: hsl(204deg, 43%, 93%);
+  font-size: 1.76rem;
+  margin-bottom: 1.75rem;
+}
+.container__price h3 {
+  display: flex;
+  align-items: center;
+  color: rgba(229, 239, 245, 0.45);
+  font-size: 1.63rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+.container__price h3 span {
+  color: hsl(204deg, 43%, 93%);
+  font-size: 2em;
+  letter-spacing: normal;
+  margin-right: 1.3rem;
+}
+.container__price p {
+  color: hsl(204deg, 43%, 93%);
+  font-size: 1.555rem;
+  margin-bottom: 3rem;
+}
+.container__price button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-block: 1.45rem;
+  border-radius: 0.5rem;
+  color: hsl(204deg, 43%, 93%);
+  background-color: hsl(71deg, 73%, 54%);
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+.container__price button:hover {
+  outline: white solid 2px;
+  outline-offset: -2px;
+  background-color: hsl(179deg, 62%, 43%);
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+}
+
+.container__about {
+  background-color: hsl(179deg, 47%, 52%);
+  border-radius: 0 0 0.8rem 0.8rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.4rem;
+}
+@media screen and (min-width: 600px) {
+  .container__about {
+    border-radius: 0 0 0.8rem 0;
+    padding-top: 4.1rem;
+  }
+}
+.container__about h2 {
+  color: hsl(204deg, 43%, 93%);
+  font-size: 1.1em;
+  margin-bottom: 1.9rem;
+}
+.container__about ul {
+  color: rgba(229, 239, 245, 0.75);
+  font-size: 0.855em;
+  line-height: 1.45;
+}
+
+/*# sourceMappingURL=style.css.map */
